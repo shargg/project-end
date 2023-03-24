@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SevenLoft</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .content-wrapper {
+            margin: 70px 70px 70px 70px;
+        }
+
+        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+            width: 50%;
+            padding-right: -64px;
+            padding-left: 57px;
+        }
+
+        .row {
+            margin-right: -276px;
+            margin-left: -296px;
+        }
+
+        /* Header */       
+        .header {
+            background-color: white;
+            height: 200;
+        }
+
+        .logo {
+            margin-left: -270px;
+            padding: 50px 10px;
+        }
+
+        .main-menu {
+            margin-left: 1097px;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .nav-item {
+            color: black;
+            padding: 0 10px;
+        }
+
+            .nav-item:last-child {
+                padding-right: 0px;
+            }
+
+        /* Home Welcome */
+        .homeWelcome {
+            background: url('https://i.postimg.cc/wTrNkVF1/background-1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 674px;
+            position: relative;
+        }
+
+            .homeWelcome .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 206px;
+                background-color: #effff4;
+                opacity: 0.8;
+                display: flex;
+                align-items: center;
+            }
+
+            .homeWelcome h1 {
+                margin-left: 100px;
+                font-family: Myriad Pro;
+                font-size: 24pt;
+                color: black;
+                font-weight: bold;
+            }
+
+            .homeWelcome p {
+                margin-left: 100px;
+                font-family: Myriad Pro;
+                font-size: 12pt;
+                color: black;
+            }
+
+        /* Services */
+        .services {
+            padding-top: 50px;
+        }
+
+        .services-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-item-wr {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            box-sizing: border-box;           
+        }
+
+            .service-item-wr h3 {
+                font-size: 24pt;
+                font-weight: bold;
+                margin-top: 60px;
+            }
+
+            .service-item-wr p {
+                font-size: 18pt;
+                margin-top: 70px;
+
+            }
+
+        .btn-service {
+            flex: 1;
+            background-color: #5ed354;
+            height: 53px;
+            width: 222px;
+            border: none;
+            border-radius: 0;
+            margin-top: 50px;
+        }
+
+        /* Testimonials and projects */
+        .testPro {
+            
+            background-color: #ebfff1;
+            height: 500px;
+            margin-top: 50px;
+        }
+
+            .testPro .logo-cont {
+                margin-top: 60px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+                .testPro .logo-cont img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+        /* Green line */
+        .green-line {
+            background-color: #5ed354;
+            height: 3px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        /*CTA section */
+        .cta ::-webkit-input-placeholder {
+            color: #70bd3a;
+        }
+
+        .cta ::-moz-placeholder {
+            color: #70bd3a;
+            opacity: 1;
+        }
+
+        .cta :-ms-input-placeholder {
+            color: #70bd3a;
+        }
+
+        .cta ::-ms-input-placeholder {
+            color: #70bd3a;
+        }
+
+        .cta ::placeholder {
+            color: #70bd3a;
+        }
+
+        .cta {
+            background-color: #363636;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+            .cta h2 {
+                font-size: 33px;
+                margin-bottom: 55px;
+            }
+
+        .field-wrap-textbox-wrap {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+            padding-left: 30px;
+        }
+
+        .cta input {
+            height: 75px;
+            width: 500px;
+            background-color: #5e5e5e;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+
+        .cta textarea {
+            height: 200px;
+            width: 1030px;
+            background-color: #5e5e5e;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+
+        .input-row {
+            display: flex;
+        }
+
+        .submit-btn {
+            height: 40px;
+            width: 125px;
+            color: white;
+            background-color: #545454;
+            border: 1px solid #5fd255;
+            position: absolute;
+            bottom: 16px;
+            right: 698px;
+            font-size: 16px;
+        }
+
+        /*footer*/
+        @media (min-width:1200px) {
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1600px;
+            }
+        }
+
+        .footer-container {
+            height: 500px;
+            width: 63%;    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo {
+            margin-right: 176px;
+        }
+
+        .footer-column {
+            margin-right: 145px;
+        }
+
+        .footer-title {
+            font-size: 30pt;
+        }
+
+        .footer-links {
+            font-size: 10pt;
+            padding-top: 10px;
+        }
+
+        .footer-info {
+            font-size: 10pt;
+            padding-top: 10px;
+        }
+
+        .footer-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center h-100">
+                    <div class="col-xl-2 logo">
+                        <img src="https://i.postimg.cc/cK6sn3br/Logo.jpg" alt="Logo" class="img-fluid">
+                    </div>
+                    <nav class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 d-flex align-items-center height-10 main-menu">
+                        <a href="#" class="nav-item">ΑΡΧΙΚΗ</a>
+                        <span class="nav-item">|</span>
+                        <a href="#" class="nav-item">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a>
+                        <span class="nav-item">|</span>
+                        <a href="#" class="nav-item">PROJECTS</a>
+                        <span class="nav-item">|</span>
+                        <a href="#" class="nav-item">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Home Welcome -->
+        <section class="homeWelcome">
+            <div class="overlay">
+                <div>
+                    <h1>Σχεδιάζουμε και Προωθούμε e-shop υψηλής αισθητικής</h1>
+                    <p>Είμαστε η Sevenloft, κατασκευάζουμε και προωθούμε ιστοσελίδες, αναπτύσσουμε mobile εφαρμογές.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Services -->
+        <section class="services">
+            <div class="container">
+                <div class="services-content">
+                    <div class="service-item-wr">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 service-item-wr">
+                            <img src="https://i.postimg.cc/4KMXb3Dw/Mobile-icon.png" alt="Mobile icon">
+                            <h3>MOBILE ΕΦΑΡΜΟΓΕΣ</h3>
+                            <p>Αναπτύσσουμε custom mobile εφαρμογές για συσκευές iOS (iPhone & iPad) & Android. Δημιουργούμε ένα real time κανάλι mobile επικοινωνίας με το κοινό σας με τη χρήση προσωποποιημένων push notifications.</p>
+                            <button class="btn-service">Find More</button>
+                        </div>
+                    </div>
+                    <div class="service-item-wr">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 service-item-wr">
+                            <img src="https://i.postimg.cc/rDjmWMyY/E-shop-icon.png" alt="E-shop icon">
+                            <h3>ΚΑΤΑΣΚΕΥΗ E-SHOP</h3>
+                            <p>Στην κατασκευή e-shop θέλουμε να κάνουμε τα πράγματα διαφορετικά. Αναπτύσσουμε γρήγορα custom e-shop με έμφαση στην αύξηση της κερδοφορία σας. Άμεση τεχνική υποστήριξη με εγγυημένο μέγιστο χρόνο επίλυσης για όποια ανάγκη προκύψει.</p>
+                            <button class="btn-service">Find More</button>
+                        </div>
+                    </div>
+                    <div class="service-item-wr">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 service-item-wr">
+                            <img src="https://i.postimg.cc/4YsymmG9/Digital-marketing-icon.png" alt="Digital Marketing icon">
+                            <h3>DIGITAL MARKETING</h3>
+                            <p>Είμαστε Google Premier Partner και προσφέρουμε μια ολοκληρωμένη λύση Digital Marketing. Εστιάζουμε στο performance, δεν συζητάμε για κλικ και likes αλλά εστιάζουμε στις πωλήσεις, στα πόσα χρήματα έχουμε δώσει και πόσα έχουν έρθει πίσω.</p>
+                            <button class="btn-service">Find More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Green line -->
+        <div class="green-line"></div>
+        <!-- Testimonials and projects -->
+        <section class="testPro">
+            <div class="container">
+                <div class="row">
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/N06rBwtX/Logo-1.png" alt="Logo-1" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/hjMzQbfP/Logo-2.png" alt="Logo-2" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/XqzrQjfR/Logo-3.png" alt="Logo-3" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/T1wyVLDj/Logo-4.png" alt="Logo-4" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/CMPnFN3c/Logo-5.png" alt="Logo-5" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/NfK9LXYB/Logo-6.png" alt="Logo-6" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/L6GqPs6f/Logo-7.png" alt="Logo-7" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/TP6pkHb3/Logo-8.png" alt="Logo-8" /></a>
+                    </div>
+                    <div class="logo-cont col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/vZ94tdcK/Logo-9.png" alt="Logo-9" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Επικοινωνήστε μαζί μας</h2>
+            <div class="container">
+                <div class="input-row">
+                    <div class="field-wrap-textbox-wrap">
+                        <input type="text" placeholder="Όνομα">
+                    </div>
+                    <div class="field-wrap-textbox-wrap">
+                        <input type="text" placeholder="Τηλέφωνο">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="field-wrap-textbox-wrap">
+                        <input type="text" placeholder="Επώνυμο">
+                    </div>
+                    <div class="field-wrap-textbox-wrap">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="field-wrap-textbox-wrap">
+                    <textarea placeholder="Μήνυμα"></textarea>
+                </div>
+                <button class="submit-btn">Αποστολή</button>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer style="background-color: #ebfff1;">
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <img src="https://i.postimg.cc/XYCgSNKN/Logo-Footer.png" alt="Logo" class="img-fluid">
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-title">SITE MAP</h2>
+                    <div class="footer-links">
+                        <a href="#">Αρχική</a><br>
+                        <a href="#">Σχετικά με εμάς</a><br>
+                        <a href="#">Projects</a><br>
+                        <a href="#">Επικοινωνία</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-title">ΒΡΕΙΤΕ ΜΑΣ</h2>
+                    <div class="footer-info">
+                        Εγνατία 62<br>
+                        Πυλαία, Θεσσαλονίκη<br>
+                        55535<br>
+                        2311 296521
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-title">SOCIAL MEDIA</h2>
+                    <ul style="padding-top: 10px; list-style-type: none; display: flex; flex-direction: row;">
+                        <li><a href="#"><img src="https://i.postimg.cc/02Y8tFr6/Linkedin-Icon.png" alt="Linkedin"></a></li>
+                        <li><a href="#"><img src="https://i.postimg.cc/mkMbW6w5/Facebook-Icon.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="https://i.postimg.cc/59F9z6VS/You-Tube-Icon.png" alt="Youtube"></a></li>
+                        <li><a href="#"><img src="https://i.postimg.cc/vHFYtb8F/Instagram-Icon.png" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="background-color: #363636; height: 150px; width: 100%; display: flex; align-items: center; justify-content: center;">
+                <p style="color: #76df2d; font-size: 30pt;">copyright @ 2021 sevenloft | ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
